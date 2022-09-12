@@ -73,7 +73,7 @@ public interface AttractieFactory
     Attractie Maak(string Naam, string Datum, string[] extraArgumenten);
 }
 
-public class DraaiMolenFactory : AttractieFactory
+public class DraaimolenFactory : AttractieFactory
 {
     public string Naam
     {
@@ -105,7 +105,7 @@ public class RollercoasterFactory : AttractieFactory
 
 public static class AttractieDataLezer
 {
-    private static List<AttractieFactory> attractieFactories = new List<AttractieFactory>() { new DraaiMolenFactory(), new RollercoasterFactory() };
+    private static List<AttractieFactory> attractieFactories = new List<AttractieFactory>() { new DraaimolenFactory(), new RollercoasterFactory() };
     public static AttractieContext Lees()
     {
         var context = new AttractieContext();
